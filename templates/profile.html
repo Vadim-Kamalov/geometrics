@@ -27,39 +27,10 @@
   </nav>
   
   <main class="m-5 h-screen">
+    <img class="inline" src="src/svg/user.svg" alt="User Picture" width="100">
+    <div class="inline text-3xl">{{.user.Name}}</div>
+    <p class="text-lg">Школа: {{.user.School}}<br>Класс: {{.user.Grade}}<br>Решено задач: 123<br>Последний раз в сети: вчера<br>Зарегистрирован: 05.10.2022 00:22:13</p>
 
-    <div class="description">
-      <p class="text-2xl mb-2">{{ .problem.ID }}. {{ .problem.Name }}</p>
-
-      <p class="">{{ .problem.Description }}</p>
-    </div>
-    <div class="solve-btn my-8">
-      <a href="./{{.problem.ID}}?action=solve" class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Приступить к решению</a>
-    </div>
-
-    <div class="submits">
-      <p class="text-lg mb-2">Ваши посылки по задаче <a href="./submits" class="text-base hover:underline text-gray-400 hover:text-gray-900">все посылки</a></p>
-      <table class="w-full text-center table-auto">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
-          <tr>
-            <th>id</th>
-            <th>Статус</th>
-            <th>Создано</th>
-            <th>Действие</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{ range .submits }}
-          <tr>
-            <td class="py-3">{{ .ID }}</td>
-            <td>{{ .StatusS }}</td>
-            <td>{{ .CreatedAtS }}</td>
-            <td><a href="/submits/{{ .ID }}" class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded">Посмотреть</a></td>
-          </tr>
-          {{ end }}
-        </tbody>
-      </table>
-    </div>
 
   </main>
 

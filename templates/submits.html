@@ -29,16 +29,11 @@
   <main class="m-5 h-screen">
 
     <div class="description">
-      <p class="text-2xl mb-2">{{ .problem.ID }}. {{ .problem.Name }}</p>
-
-      <p class="">{{ .problem.Description }}</p>
-    </div>
-    <div class="solve-btn my-8">
-      <a href="./{{.problem.ID}}?action=solve" class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Приступить к решению</a>
+      <p class="text-2xl mb-2">{{ .problem.ID }}. {{ .problem.ID }}</p>
     </div>
 
     <div class="submits">
-      <p class="text-lg mb-2">Ваши посылки по задаче <a href="./submits" class="text-base hover:underline text-gray-400 hover:text-gray-900">все посылки</a></p>
+      <p class="text-lg mb-2">Все посылки по задаче <a href="/problems/{{ .problem.ID }}" class="text-base hover:underline text-gray-400 hover:text-gray-900">К задаче</a></p>
       <table class="w-full text-center table-auto">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50">
           <tr>
