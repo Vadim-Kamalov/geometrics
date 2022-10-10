@@ -73,7 +73,6 @@ def main():
 
     get_xml(ggbBase64)
     response = get_json()
-    print(response)
 
     print(check(response), end="")
 
