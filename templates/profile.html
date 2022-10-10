@@ -28,10 +28,8 @@
   
   <main class="m-5 h-screen">
     <img class="inline" src="src/svg/user.svg" alt="User Picture" width="100">
-    <div class="inline text-3xl">{{.user.Name}}</div>
-    <p class="text-lg">Школа: {{.user.School}}<br>Класс: {{.user.Grade}}<br>Решено задач: 123<br>Последний раз в сети: вчера<br>Зарегистрирован: 05.10.2022 00:22:13</p>
-
-
+    <div class="inline text-3xl">{{ .name }}</div>
+    <p class="text-lg">Школа: {{ .user.School.value }}<br>Класс: {{ .user.Grade.value }}</p>
   </main>
 
   <footer class="bg-gray-900 border-gray-200 px-2 text-white">

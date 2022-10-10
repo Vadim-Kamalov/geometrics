@@ -16,7 +16,7 @@
     "height":705,
     "autoHeight":true,
     "showMenuBar":true,
-    "showAlgebraInput":false,
+    "showAlgebraInput":true,
     "showToolBar":true,
     "customToolBar":"0 62 | 1 | 2 15 18 | 53 | 40 41 42 , 27 28 6",
     "showToolBarHelp":true,
@@ -72,7 +72,7 @@
             }
         }
 
-        xhr.open("POST", window.location.protocol + "//" + window.location.hostname + "/api/v1/problems/{{ .problem.ID }}");
+        xhr.open("POST", "/api/v1/problems/{{ .problem.ID }}");
 
         xhr.setRequestHeader("Content-type", "application/json");
         xhr.setRequestHeader("Accept", "application/json");

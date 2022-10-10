@@ -7,9 +7,21 @@
     <title>Geometrics</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="src/svg/icon.svg">
+    <style>
+      .page-wrapper{
+       display: flex;
+       flex-direction: column;
+       height: 100%;
+       min-height: 100vh;
+     }
+     main {
+       flex-grow: 1;
+       min-height: 1px;
+     }
+   </style>
 </head>
-<body>
-    
+<body class="flex flex-col h-screen">
+<div class="page-wrapper">
 <nav class="bg-gray-300 border-gray-200 px-2 sm:px-4 py-2.5">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
       <a href="#" class="flex items-center">
@@ -26,7 +38,7 @@
     </div>
   </nav>
   
-  <main class="m-5 h-screen">
+  <main class="m-5">
 
     <div class="description">
       <p class="text-2xl mb-2">{{ .problem.ID }}. {{ .problem.ID }}</p>
@@ -38,6 +50,7 @@
         <thead class="text-xs text-gray-700 uppercase bg-gray-50">
           <tr>
             <th>id</th>
+            <th>Участник</th>
             <th>Статус</th>
             <th>Создано</th>
             <th>Действие</th>
@@ -47,6 +60,7 @@
           {{ range .submits }}
           <tr>
             <td class="py-3">{{ .ID }}</td>
+            <td><a href="/profiles/1" class="hover:underline">Имя Фамилия</a></td>
             <td>{{ .StatusS }}</td>
             <td>{{ .CreatedAtS }}</td>
             <td><a href="/submits/{{ .ID }}" class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded">Посмотреть</a></td>
@@ -61,5 +75,6 @@
   <footer class="bg-gray-900 border-gray-200 px-2 text-white">
     &copy; Geometrics
   </footer>
+</div>
 </body>
 </html>
